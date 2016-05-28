@@ -1,0 +1,57 @@
+//
+// Person.h
+//
+// Copyright (c) 2014 to present, Brian Gesiak @modocache
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+//
+
+#import <Foundation/Foundation.h>
+
+@interface Person : NSObject
+
+@property (nonatomic, copy) NSString *fbId;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *emailId;
+@property (nonatomic, copy) NSString *location;
+@property (nonatomic, assign) NSUInteger age;
+@property (nonatomic, strong) UIImage *image;
+@property (nonatomic, copy) NSString *goal;
+@property (nonatomic, copy) NSString *city;
+@property (nonatomic, copy) NSString *fromDate;
+@property (nonatomic, copy) NSString *toDate;
+@property (nonatomic, assign) NSUInteger numberOfSharedFriends;
+@property (nonatomic, assign) NSUInteger numberOfSharedInterests;
+@property (nonatomic, assign) NSUInteger numberOfPhotos;
+
+
+- (instancetype)initWithName:(NSString *)fbId
+                        name:(NSString *)name
+                     emailId:(NSString *)emailId
+                    location:(NSString *)location
+                         age:(NSUInteger)age
+                       image:(UIImage *)image
+                        goal:(NSString *)goal
+                        city:(NSString *)city
+                    fromDate:(NSString*)fromDate
+                      toDate:(NSString*)toDate
+       numberOfSharedFriends:(NSUInteger)numberOfSharedFriends
+     numberOfSharedInterests:(NSUInteger)numberOfSharedInterests
+              numberOfPhotos:(NSUInteger)numberOfPhotos;
+@end
